@@ -252,15 +252,29 @@ section{padding-block:74px}
 .variants button[aria-pressed="true"]{
   background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:600;
 }
-.buyrow{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-top:auto}
+.buyrow{display:flex;flex-direction:column;gap:11px;margin-top:auto}
 .price{font-family:var(--font-body);font-variant-numeric:tabular-nums;font-size:28px;font-weight:600;line-height:1.1;letter-spacing:-.01em}
-.price small{display:block;font-size:13px;letter-spacing:.02em;color:var(--ink-2);font-weight:400;margin-top:2px}
-.add{
-  background:var(--ink);color:var(--ground);border-radius:999px;padding:11px 20px;
-  font-weight:600;font-size:15px;white-space:nowrap;transition:.15s;
+.price .row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price .was{font-size:18px;font-weight:400;color:var(--ink-2);text-decoration:line-through;text-decoration-thickness:1.5px}
+.price small{display:block;font-size:13px;letter-spacing:.02em;color:var(--ink-2);font-weight:400;margin-top:3px}
+.save{
+  align-self:flex-start;background:var(--leaf);color:#F6F3E6;border-radius:999px;
+  padding:4px 12px;font-size:12.5px;font-weight:600;letter-spacing:.01em;line-height:1.5;
 }
+/* দুই বাটন পাশাপাশি */
+.cta{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cta button{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  border-radius:999px;padding:11px 12px;font-weight:600;font-size:14.5px;
+  white-space:nowrap;transition:.15s;border:1.5px solid var(--accent);
+}
+.cta button svg{width:16px;height:16px;flex:none}
+.add{background:transparent;color:var(--accent)}
 .add:hover{background:var(--accent);color:var(--accent-ink)}
-.add[data-added="1"]{background:var(--leaf);color:#F6F3E6}
+.add[data-added="1"]{background:var(--leaf);border-color:var(--leaf);color:#F6F3E6}
+.buy{background:var(--accent);color:var(--accent-ink)}
+.buy:hover{filter:brightness(1.08)}
+@media (max-width:420px){ .cta{grid-template-columns:1fr} }
 
 /* ─────────────────────────────  steps / recipe  ───────────────────────────── */
 .alt{background:var(--surface);border-block:1px solid var(--line)}
@@ -762,30 +776,30 @@ const PRODUCTS = [
     pic:"images/mota.jpg",                  // ছবি বদলাতে হলে এই ফাইলটি বদলান
     tag:"সবচেয়ে জনপ্রিয়",
     desc:"পুরনো লতার মোটা কাণ্ড। ঝাঁঝ সবচেয়ে বেশি, চিবিয়ে খেতেও দারুণ। গরু ও খাসির জন্য এটাই নিন।",
-    variants:[{w:"২৫০ গ্রাম",p:320},{w:"৫০০ গ্রাম",p:610},{w:"১ কেজি",p:1180}] },
+    variants:[{w:"২৫০ গ্রাম",p:320,op:360},{w:"৫০০ গ্রাম",p:610,op:690},{w:"১ কেজি",p:1180,op:1330}] },
 
   { id:"chikon", bn:"চুই ঝাল — চিকন কচি", en:"Tender Vine", seed:13, kind:"vine",
     desc:"নরম, তাড়াতাড়ি সেদ্ধ হয়। হাঁস, মুরগি, বড় মাছের ঝোল আর খিচুড়িতে ভালো মানায়।",
-    variants:[{w:"২৫০ গ্রাম",p:260},{w:"৫০০ গ্রাম",p:490},{w:"১ কেজি",p:940}] },
+    variants:[{w:"২৫০ গ্রাম",p:260,op:295},{w:"৫০০ গ্রাম",p:490,op:550},{w:"১ কেজি",p:940,op:1060}] },
 
   { id:"shikor", bn:"চুই শিকড়", en:"Chui Root", seed:21, kind:"root",
     tag:"সীমিত",
     desc:"মাটির নিচের অংশ — ঘ্রাণ আর ঝাঁঝ দুটোই সবচেয়ে চড়া। অল্প দিলেই পুরো ঝোল বদলে যায়।",
-    variants:[{w:"২৫০ গ্রাম",p:450},{w:"৫০০ গ্রাম",p:860}] },
+    variants:[{w:"২৫০ গ্রাম",p:450,op:500},{w:"৫০০ গ্রাম",p:860,op:970}] },
 
   { id:"cut", bn:"কাটা ও পরিষ্কার চুই", en:"Cut & Cleaned", seed:34, kind:"cut",
     tag:"রেডি টু কুক", tagKind:"leaf",
     desc:"ছাল ছাড়ানো, ধোয়া, ১ ইঞ্চি মাপে কাটা। হাঁড়িতে ঢেলে দিলেই হলো — ব্যস্ত রান্নাঘরের জন্য।",
-    variants:[{w:"২৫০ গ্রাম",p:380},{w:"৫০০ গ্রাম",p:720}] },
+    variants:[{w:"২৫০ গ্রাম",p:380,op:430},{w:"৫০০ গ্রাম",p:720,op:810}] },
 
   { id:"gura", bn:"চুই ঝাল গুঁড়া", en:"Chui Powder", seed:5, kind:"powder",
     desc:"শুকিয়ে গুঁড়া করা চুই। ঝোলে টুকরো না চাইলে, বা ভুনা-খিচুড়িতে এক চিমটি দিতে।",
-    variants:[{w:"১০০ গ্রাম",p:300},{w:"২৫০ গ্রাম",p:690}] },
+    variants:[{w:"১০০ গ্রাম",p:300,op:340},{w:"২৫০ গ্রাম",p:690,op:780}] },
 
   { id:"family", bn:"পারিবারিক কম্বো", en:"Family Combo", seed:41, kind:"combo",
     tag:"সাশ্রয়ী",
     desc:"৭৫০ গ্রাম মোটা গোছা + ২৫০ গ্রাম শিকড় একসঙ্গে। কোরবানি বা বড় দাওয়াতের জন্য।",
-    variants:[{w:"১ কেজি বক্স",p:1290}] }
+    variants:[{w:"১ কেজি বক্স",p:1290,op:1490}] }
 ];
 
 /* ══════════════════════  ৩. ছোট ছোট সহায়ক ফাংশন  ══════════════════════ */
@@ -889,6 +903,15 @@ function svg(seed, kind, w=320, h=200){
   return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="চুই ঝালের টুকরো">${art(seed,kind,w,h)}</svg>`;
 }
 /* পণ্যের ছবি থাকলে ছবি, না থাকলে আঁকা ছবি */
+const cartIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6"/><circle cx="10" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/></svg>`;
+/* দাম: নতুন দাম + কাটা পুরনো দাম */
+function priceHTML(v){
+  return `<span class="row"><span>${taka(v.p)}</span>${v.op && v.op > v.p ? `<span class="was">${taka(v.op)}</span>` : ""}</span><small>${v.w}</small>`;
+}
+/* সঞ্চয়ের ব্যাজ */
+function saveHTML(v){
+  return (v.op && v.op > v.p) ? `<span class="save">${taka(v.op - v.p)} সঞ্চয় করুন</span>` : "";
+}
 function media(p, w=320, h=200){
   return p.pic
     ? `<img src="${p.pic}" alt="${p.bn}" loading="lazy" decoding="async">`
@@ -940,8 +963,12 @@ function renderGrid(){
           ${p.variants.map((v,i)=>`<button type="button" data-pick="${p.id}" data-i="${i}" aria-pressed="${i===chosen[p.id]}">${v.w}</button>`).join("")}
         </div>
         <div class="buyrow">
-          <div class="price">${taka(v.p)}<small>${v.w}</small></div>
-          <button class="add" data-add="${p.id}">কার্টে দিন</button>
+          <div class="price">${priceHTML(v)}</div>
+          ${saveHTML(v)}
+          <div class="cta">
+            <button class="add" data-add="${p.id}">${cartIcon}কার্টে যোগ করুন</button>
+            <button class="buy" data-buy="${p.id}">${cartIcon}এখনই কিনুন</button>
+          </div>
         </div>
       </div>
     </article>`;
@@ -1090,15 +1117,25 @@ document.addEventListener("click", e => {
     const card = pick.closest(".card");
     card.querySelectorAll("[data-pick]").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.i === chosen[id])));
     const v = prod(id).variants[chosen[id]];
-    card.querySelector(".price").innerHTML = `${taka(v.p)}<small>${v.w}</small>`;
+    card.querySelector(".price").innerHTML = priceHTML(v);
+    const box = card.querySelector(".buyrow"), badge = card.querySelector(".save");
+    if(badge) badge.remove();
+    if(v.op && v.op > v.p) box.querySelector(".price").insertAdjacentHTML("afterend", saveHTML(v));
+    return;
+  }
+
+  const buy = t.closest("[data-buy]");
+  if(buy){
+    addToCart(buy.dataset.buy);
+    closeCart(); openModal();
     return;
   }
 
   const add = t.closest("[data-add]");
   if(add){
     addToCart(add.dataset.add);
-    add.dataset.added="1"; add.textContent="যোগ হয়েছে ✓";
-    setTimeout(()=>{ add.dataset.added="0"; add.textContent="কার্টে দিন"; }, 1400);
+    add.dataset.added="1"; add.innerHTML="যোগ হয়েছে ✓";
+    setTimeout(()=>{ add.dataset.added="0"; add.innerHTML = cartIcon + "কার্টে যোগ করুন"; }, 1400);
     return;
   }
 
