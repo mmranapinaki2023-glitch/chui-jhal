@@ -11,7 +11,8 @@
 <meta property="og:description" content="গোছা ধরে কাটা, শিকড়সহ খাঁটি চুই। সারা দেশে ডেলিভারি, ক্যাশ অন ডেলিভারি।">
 <meta property="og:locale" content="bn_BD">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 4c-7 5-11 10-11 17a11 11 0 0 0 22 0c0-7-4-12-11-17Z' fill='%237A4E2C'/%3E%3Cpath d='M20 4c-7 5-11 10-11 17a11 11 0 0 0 11 11V4Z' fill='%23412818'/%3E%3Cpath d='M20 12v18' stroke='%23E9D5A8' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" href="images/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="images/logo.png">
 <title>চুইঘর · Chuighor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,7 +121,12 @@ header{
 }
 .bar{display:flex;align-items:center;gap:18px;height:66px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto}
-.brand .mark{width:34px;height:34px;flex:none}
+.brand .mark{width:38px;height:38px;flex:none;object-fit:contain;border-radius:9px}
+/* ডার্ক মোডে লোগোর বাদামি রেখা যেন হারিয়ে না যায় — হালকা ব্যাকগ্রাউন্ড */
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .brand .mark{background:#F3E7D3;padding:2px}
+}
+:root[data-theme="dark"] .brand .mark{background:#F3E7D3;padding:2px}
 .brand b{font-family:var(--font-display);font-size:23px;font-weight:400;letter-spacing:.01em;display:block;color:var(--ink)}
 .brand .sub{
   font-family:var(--font-mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;
@@ -453,12 +459,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding-block:
 <header>
   <div class="wrap bar">
     <a class="brand" href="#top">
-      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
-        <path d="M20 4c-7 5-11 10-11 17a11 11 0 0 0 22 0c0-7-4-12-11-17Z" fill="var(--bark-1)"/>
-        <path d="M20 4c-7 5-11 10-11 17a11 11 0 0 0 11 11V4Z" fill="var(--bark-2)"/>
-        <path d="M20 12v18" stroke="var(--wood-1)" stroke-width="2" stroke-linecap="round"/>
-        <path d="M20 20c3-1 5-3 6-6M20 26c-3-1-5-3-6-6" stroke="var(--wood-2)" stroke-width="1.6" stroke-linecap="round" fill="none"/>
-      </svg>
+      <img class="mark" src="images/logo.png" alt="চুইঘর লোগো" width="40" height="40">
       <span>
         <b>চুইঘর</b>
         <span class="sub">Chuighor · Khulna</span>
@@ -634,11 +635,7 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding-block:
     <div class="foot">
       <div>
         <div class="brand" style="gap:10px">
-          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
-            <path d="M20 4c-7 5-11 10-11 17a11 11 0 0 0 22 0c0-7-4-12-11-17Z" fill="var(--bark-1)"/>
-            <path d="M20 4c-7 5-11 10-11 17a11 11 0 0 0 11 11V4Z" fill="var(--bark-2)"/>
-            <path d="M20 12v18" stroke="var(--wood-1)" stroke-width="2" stroke-linecap="round"/>
-          </svg>
+          <img class="mark" src="images/logo.png" alt="চুইঘর লোগো" width="40" height="40">
           <span><b style="font-family:var(--font-display);font-size:23px">চুইঘর</b></span>
         </div>
         <p style="max-width:34ch">খুলনার চুই ঝাল, সারা দেশে। ছোট পরিসরে, হাতে বাছাই করে — যতটুকু ভালো, ততটুকুই পাঠাই।</p>
