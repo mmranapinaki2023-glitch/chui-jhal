@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="খুলনার খাঁটি চুই ঝাল — মোটা গোছা, চিকন কচি, শিকড়, কাটা ও পরিষ্কার করা এবং গুঁড়া। সারা দেশে কুরিয়ারে ডেলিভারি, ক্যাশ অন ডেলিভারি।">
+<meta name="theme-color" content="#F3E7D3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17100A" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="চুইঘর · Chuighor — খুলনার খাঁটি চুই ঝাল">
+<meta property="og:description" content="গোছা ধরে কাটা, শিকড়সহ খাঁটি চুই। সারা দেশে ডেলিভারি, ক্যাশ অন ডেলিভারি।">
+<meta property="og:locale" content="bn_BD">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 4c-7 5-11 10-11 17a11 11 0 0 0 22 0c0-7-4-12-11-17Z' fill='%237A4E2C'/%3E%3Cpath d='M20 4c-7 5-11 10-11 17a11 11 0 0 0 11 11V4Z' fill='%23412818'/%3E%3Cpath d='M20 12v18' stroke='%23E9D5A8' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>চুইঘর · Chuighor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+/* ─────────────────────────────  tokens  ───────────────────────────── */
+:root{
+  --ground:#F3E7D3;
+  --surface:#FCF6EA;
+  --surface-2:#EBDCC1;
+  --ink:#2B1A11;
+  --ink-2:#6E5540;
+  --ink-3:#907A6A;
+  --line:#DCC7A6;
+  --line-soft:#E6D6BA;
+  --accent:#8C2F1F;
+  --accent-2:#A8442E;
+  --accent-ink:#FFF6EA;
+  --turmeric:#B57F22;
+  --leaf:#4E5F35;
+  --bark-1:#7A4E2C;
+  --bark-2:#412818;
+  --bark-3:#5C3720;
+  --wood-1:#E9D5A8;
+  --wood-2:#CBA96C;
+  --pith:#8A6234;
+  --shadow-1:0 1px 2px rgba(43,26,17,.07), 0 10px 24px -16px rgba(43,26,17,.45);
+  --shadow-2:0 2px 6px rgba(43,26,17,.10), 0 30px 60px -30px rgba(43,26,17,.55);
+  --radius:14px;
+  --maxw:1180px;
+  --font-display:"Tiro Bangla", Georgia, "Times New Roman", serif;
+  --font-body:"Hind Siliguri", "Segoe UI", system-ui, sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#17100A;
+    --surface:#221710;
+    --surface-2:#2E2015;
+    --ink:#F2E4CD;
+    --ink-2:#BCA184;
+    --ink-3:#94795C;
+    --line:#3D2B1D;
+    --line-soft:#332317;
+    --accent:#E2764F;
+    --accent-2:#C55B39;
+    --accent-ink:#1B1009;
+    --turmeric:#DFAE55;
+    --leaf:#93A868;
+    --shadow-1:0 1px 2px rgba(0,0,0,.5), 0 10px 24px -16px rgba(0,0,0,.9);
+    --shadow-2:0 2px 6px rgba(0,0,0,.5), 0 30px 60px -30px rgba(0,0,0,1);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#17100A;
+  --surface:#221710;
+  --surface-2:#2E2015;
+  --ink:#F2E4CD;
+  --ink-2:#BCA184;
+  --ink-3:#94795C;
+  --line:#3D2B1D;
+  --line-soft:#332317;
+  --accent:#E2764F;
+  --accent-2:#C55B39;
+  --accent-ink:#1B1009;
+  --turmeric:#DFAE55;
+  --leaf:#93A868;
+  --shadow-1:0 1px 2px rgba(0,0,0,.5), 0 10px 24px -16px rgba(0,0,0,.9);
+  --shadow-2:0 2px 6px rgba(0,0,0,.5), 0 30px 60px -30px rgba(0,0,0,1);
+}
+
+/* ─────────────────────────────  base  ───────────────────────────── */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:1.2;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+button{font-family:inherit;font-size:inherit;color:inherit;border:0;background:none;cursor:pointer}
+:focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:22px}
+.mono{font-family:var(--font-mono);font-variant-numeric:tabular-nums}
+.eyebrow{
+  font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-2);display:flex;align-items:center;gap:10px;
+}
+.eyebrow::after{content:"";height:1px;flex:1;background:var(--line)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ─────────────────────────────  header  ───────────────────────────── */
+header{
+  position:sticky;top:0;z-index:60;
+  background:color-mix(in srgb, var(--ground) 88%, transparent);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.bar{display:flex;align-items:center;gap:18px;height:66px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;margin-right:auto}
+.brand .mark{width:34px;height:34px;flex:none}
+.brand b{font-family:var(--font-display);font-size:23px;font-weight:400;letter-spacing:.01em;display:block;color:var(--ink)}
+.brand .sub{
+  font-family:var(--font-mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink-2);display:block;margin-top:-3px;
+}
+nav.links{display:flex;gap:24px}
+nav.links a{
+  text-decoration:none;font-size:15.5px;color:var(--ink-2);padding-block:6px;
+  border-bottom:1.5px solid transparent;transition:color .18s, border-color .18s;
+}
+nav.links a:hover{color:var(--accent);border-color:var(--accent)}
+.icon-btn{
+  display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);
+  background:var(--surface);border-radius:999px;padding:8px 14px;line-height:1;
+  transition:border-color .18s, transform .12s;
+}
+.icon-btn:hover{border-color:var(--accent)}
+.icon-btn:active{transform:translateY(1px)}
+#cartBtn{font-size:15px}
+#cartCount{
+  font-family:var(--font-mono);font-size:12px;font-weight:600;min-width:21px;height:21px;
+  display:inline-grid;place-items:center;border-radius:999px;
+  background:var(--accent);color:var(--accent-ink);padding-inline:5px;
+}
+#cartCount[data-empty="1"]{background:var(--surface-2);color:var(--ink-2)}
+
+/* ─────────────────────────────  hero  ───────────────────────────── */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;
+  padding-block:64px 72px;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;align-self:start;
+  border:1px solid var(--line);border-radius:999px;padding:5px 14px 5px 8px;
+  background:var(--surface);font-size:13.5px;color:var(--ink-2);
+}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--leaf);display:inline-block;margin-left:4px}
+h1{font-size:clamp(38px,6.2vw,66px);margin:20px 0 0;letter-spacing:-.005em}
+h1 em{font-style:normal;color:var(--accent);position:relative;white-space:nowrap}
+h1 em::after{
+  content:"";position:absolute;left:0;right:0;bottom:.06em;height:.1em;
+  background:var(--turmeric);opacity:.4;border-radius:2px;
+}
+.lede{margin-top:18px;font-size:18.5px;color:var(--ink-2);max-width:46ch}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:13px 24px;border-radius:999px;font-weight:600;font-size:16px;
+  text-decoration:none;transition:transform .12s, background .18s, border-color .18s;
+}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{background:var(--accent-2)}
+.btn-ghost{border:1px solid var(--line);background:var(--surface)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-wide{width:100%}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.hero-art{position:relative;display:grid;place-items:center;min-height:340px}
+.hero-art svg{width:100%;max-width:460px;filter:drop-shadow(0 26px 34px rgba(43,26,17,.28))}
+.hero-note{
+  position:absolute;right:0;bottom:6px;max-width:190px;text-align:right;
+  font-size:13px;color:var(--ink-2);font-style:italic;font-family:var(--font-display);
+}
+
+/* ─────────────────────────────  trust strip  ───────────────────────────── */
+.strip{background:var(--surface);border-bottom:1px solid var(--line)}
+.strip ul{
+  list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);
+}
+.strip li{
+  padding:20px 22px;display:flex;gap:12px;align-items:flex-start;
+  border-left:1px solid var(--line-soft);
+}
+.strip li:first-child{border-left:0}
+.strip b{display:block;font-weight:600;font-size:15.5px}
+.strip small{color:var(--ink-2);font-size:13.5px;line-height:1.45;display:block}
+.strip svg{flex:none;margin-top:3px}
+
+/* ─────────────────────────────  sections  ───────────────────────────── */
+section{padding-block:74px}
+.sec-head{max-width:60ch;margin-bottom:34px}
+.sec-head h2{font-size:clamp(28px,3.6vw,40px);margin-top:14px}
+.sec-head p{color:var(--ink-2);margin-top:12px;font-size:17px}
+
+/* ─────────────────────────────  products  ───────────────────────────── */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow-1);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-2)}
+.card-art{
+  position:relative;aspect-ratio:16/10;display:grid;place-items:center;
+  background:
+    radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--turmeric) 13%, transparent), transparent 70%),
+    var(--surface-2);
+  border-bottom:1px solid var(--line);
+}
+.card-art svg{width:78%;filter:drop-shadow(0 12px 16px rgba(43,26,17,.25))}
+.tag{
+  position:absolute;top:12px;left:12px;font-family:var(--font-body);font-size:12.5px;font-weight:600;
+  letter-spacing:.02em;background:var(--accent);color:var(--accent-ink);
+  padding:4px 12px;border-radius:999px;line-height:1.5;
+}
+.tag[data-kind="leaf"]{background:var(--leaf);color:var(--accent-ink)}
+.card-body{padding:20px;display:flex;flex-direction:column;gap:14px;flex:1}
+.card h3{font-size:24px}
+.card .en{
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-2);margin-top:6px;
+}
+.card p.desc{font-size:15px;color:var(--ink-2);line-height:1.6}
+.variants{display:flex;gap:7px;flex-wrap:wrap}
+.variants button{
+  border:1px solid var(--line);border-radius:9px;padding:6px 12px;font-size:14px;
+  background:transparent;transition:.15s;
+}
+.variants button:hover{border-color:var(--accent)}
+.variants button[aria-pressed="true"]{
+  background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:600;
+}
+.buyrow{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-top:auto}
+.price{font-family:var(--font-body);font-variant-numeric:tabular-nums;font-size:28px;font-weight:600;line-height:1.1;letter-spacing:-.01em}
+.price small{display:block;font-size:13px;letter-spacing:.02em;color:var(--ink-2);font-weight:400;margin-top:2px}
+.add{
+  background:var(--ink);color:var(--ground);border-radius:999px;padding:11px 20px;
+  font-weight:600;font-size:15px;white-space:nowrap;transition:.15s;
+}
+.add:hover{background:var(--accent);color:var(--accent-ink)}
+.add[data-added="1"]{background:var(--leaf);color:#F6F3E6}
+
+/* ─────────────────────────────  steps / recipe  ───────────────────────────── */
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:s}
+.step{border-top:2px solid var(--accent);padding-top:18px}
+.step .n{
+  font-family:var(--font-body);font-size:13.5px;letter-spacing:.05em;color:var(--accent);
+  text-transform:uppercase;font-weight:600;
+}
+.step h3{font-size:22px;margin:8px 0 8px}
+.step p{color:var(--ink-2);font-size:15.5px}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.facts{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:2px}
+.facts li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line-soft);align-items:baseline}
+.facts b{font-weight:600}
+.facts span{color:var(--ink-2);font-size:15.5px}
+.facts .k{
+  font-family:var(--font-body);font-size:13.5px;font-weight:600;letter-spacing:.03em;
+  color:var(--turmeric);min-width:78px;flex:none;
+}
+
+/* ─────────────────────────────  faq  ───────────────────────────── */
+.faq{display:grid;gap:0;max-width:820px}
+details{border-bottom:1px solid var(--line)}
+details summary{
+  cursor:pointer;list-style:none;padding:18px 40px 18px 0;position:relative;
+  font-size:17.5px;font-weight:500;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{
+  content:"+";position:absolute;right:6px;top:16px;font-family:var(--font-mono);
+  font-size:22px;color:var(--accent);transition:transform .2s;
+}
+details[open] summary::after{content:"–"}
+details p{padding:0 40px 20px 0;color:var(--ink-2);font-size:16px}
+
+/* ─────────────────────────────  cart drawer  ───────────────────────────── */
+.scrim{
+  position:fixed;inset:0;background:rgba(20,12,7,.55);backdrop-filter:blur(3px);
+  opacity:0;pointer-events:none;transition:opacity .25s;z-index:80;
+}
+.scrim[data-open="1"]{opacity:1;pointer-events:auto}
+.drawer{
+  position:fixed;top:0;right:0;height:100dvh;width:min(430px,100vw);z-index:90;
+  background:var(--surface);border-left:1px solid var(--line);
+  transform:translateX(101%);transition:transform .3s cubic-bezier(.4,0,.2,1);
+  display:flex;flex-direction:column;box-shadow:var(--shadow-2);
+}
+.drawer[data-open="1"]{transform:none}
+.drawer-head{
+  display:flex;align-items:center;gap:12px;padding:20px 22px;border-bottom:1px solid var(--line);
+}
+.drawer-head h2{font-size:24px;margin-right:auto}
+.close{
+  width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;
+  font-size:20px;line-height:1;transition:.15s;
+}
+.close:hover{border-color:var(--accent);color:var(--accent)}
+.drawer-body{flex:1;overflow-y:auto;padding:18px 22px;display:flex;flex-direction:column;gap:14px}
+.empty{text-align:center;color:var(--ink-2);padding:50px 10px;font-size:15.5px}
+.empty svg{opacity:.5;margin-bottom:14px}
+.line{display:grid;grid-template-columns:56px 1fr auto;gap:13px;align-items:center}
+.line .thumb{
+  width:56px;height:56px;border-radius:10px;background:var(--surface-2);
+  border:1px solid var(--line);display:grid;place-items:center;overflow:hidden;
+}
+.line .thumb svg{width:84%}
+.line b{display:block;font-size:15.5px;font-weight:600;line-height:1.3}
+.line small{color:var(--ink-2);font-size:13.5px;font-variant-numeric:tabular-nums}
+.qty{display:flex;align-items:center;gap:9px;margin-top:6px}
+.qty button{
+  width:25px;height:25px;border:1px solid var(--line);border-radius:7px;display:grid;place-items:center;
+  font-size:15px;line-height:1;transition:.15s;
+}
+.qty button:hover{border-color:var(--accent);color:var(--accent)}
+.qty span{font-size:15px;font-variant-numeric:tabular-nums;min-width:16px;text-align:center}
+.qty .rm{margin-left:4px;font-size:12.5px;color:var(--ink-2);border:0;text-decoration:underline;width:auto}
+.line .amt{font-size:16.5px;font-weight:600;font-variant-numeric:tabular-nums;align-self:start}
+.drawer-foot{border-top:1px solid var(--line);padding:18px 22px 22px;display:grid;gap:12px;background:var(--surface)}
+.sum{display:grid;gap:7px;font-size:15px}
+.sum div{display:flex;justify-content:space-between}
+.sum .t{font-size:20px;font-weight:600;padding-top:9px;border-top:1px solid var(--line-soft);margin-top:3px}
+.sum span:last-child{font-variant-numeric:tabular-nums;font-weight:500}
+.sum .muted{color:var(--ink-2)}
+.zone{display:flex;gap:8px}
+.zone button{
+  flex:1;border:1px solid var(--line);border-radius:9px;padding:8px;font-size:13.5px;transition:.15s;
+}
+.zone button[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.wa{background:#1FA855;color:#fff}
+.wa:hover{background:#188C46}
+
+/* ─────────────────────────────  order form  ───────────────────────────── */
+.modal{
+  position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:20px;
+  background:rgba(20,12,7,.6);backdrop-filter:blur(4px);overflow-y:auto;
+}
+.modal[data-open="1"]{display:grid}
+.sheet{
+  background:var(--surface);border:1px solid var(--line);border-radius:18px;
+  width:min(560px,100%);box-shadow:var(--shadow-2);max-height:92dvh;display:flex;flex-direction:column;
+}
+.sheet header{padding:22px 24px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;position:static;background:none;backdrop-filter:none}
+.sheet header h2{font-size:26px;margin-right:auto}
+form{padding:22px 24px;display:grid;gap:15px;overflow-y:auto}
+.field{display:grid;gap:6px}
+.field label{font-size:14px;font-weight:600}
+.field label span{color:var(--accent)}
+.field input,.field textarea,.field select{
+  font-family:inherit;font-size:16px;color:var(--ink);background:var(--ground);
+  border:1px solid var(--line);border-radius:10px;padding:11px 13px;width:100%;
+  transition:border-color .15s;
+}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent);outline:none}
+.field textarea{resize:vertical;min-height:74px}
+.field .hint{font-size:12.5px;color:var(--ink-2)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.recap{
+  background:var(--ground);border:1px dashed var(--line);border-radius:12px;padding:14px 16px;
+  font-family:var(--font-mono);font-size:13px;line-height:1.7;white-space:pre-wrap;
+  max-height:190px;overflow-y:auto;
+}
+.done{padding:26px 24px;display:grid;gap:16px;text-align:center}
+.done .tick{
+  width:58px;height:58px;border-radius:50%;background:var(--leaf);color:#F6F3E6;
+  display:grid;place-items:center;margin:0 auto;font-size:30px;
+}
+.done h3{font-size:26px}
+.done p{color:var(--ink-2);font-size:15.5px}
+.err{color:var(--accent);font-size:13px;display:none}
+.field[data-err="1"] .err{display:block}
+.field[data-err="1"] input,.field[data-err="1"] textarea{border-color:var(--accent)}
+
+/* ─────────────────────────────  footer  ───────────────────────────── */
+footer{background:var(--surface);border-top:1px solid var(--line);padding-block:52px 34px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:38px}
+.foot h4{font-size:19px;margin-bottom:12px}
+.foot p,.foot a{font-size:15px;color:var(--ink-2);text-decoration:none;display:block;margin-bottom:8px}
+.foot a:hover{color:var(--accent)}
+.foot .brand{margin-bottom:14px}
+.legal{
+  margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:13.5px;color:var(--ink-2);
+}
+
+/* ─────────────────────────────  toast  ───────────────────────────── */
+#toast{
+  position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);z-index:120;
+  background:var(--ink);color:var(--ground);padding:12px 20px;border-radius:999px;
+  font-size:15px;font-weight:500;opacity:0;pointer-events:none;transition:.25s;
+  box-shadow:var(--shadow-2);
+}
+#toast[data-show="1"]{opacity:1;transform:translate(-50%,0)}
+
+/* ─────────────────────────────  motion + responsive  ───────────────────────────── */
+.rise{opacity:0;transform:translateY(16px);transition:opacity .7s ease, transform .7s ease}
+.rise.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.001ms !important;transition-duration:.001ms !important}
+  .rise{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:26px;padding-block:44px 54px}
+  .hero-art{order:-1;min-height:auto}
+  .hero-note{display:none}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .strip ul{grid-template-columns:repeat(2,1fr)}
+  .strip li:nth-child(3){border-left:0}
+  .strip li:nth-child(n+3){border-top:1px solid var(--line-soft)}
+  .two{grid-template-columns:1fr;gap:34px}
+  .steps{grid-template-columns:1fr;gap:20px}
+  .foot{grid-template-columns:1fr 1fr}
+  nav.links{display:none}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .grid{grid-template-columns:1fr}
+  .strip ul{grid-template-columns:1fr}
+  .strip li{border-left:0;border-top:1px solid var(--line-soft)}
+  .strip li:first-child{border-top:0}
+  section{padding-block:54px}
+  .row2{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .bar{height:60px}
+}
+</style>
+</head>
+<body>
+
+
+<!-- ═══════════════════════════  header  ═══════════════════════════ -->
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M20 4c-7 5-11 10-11 17a11 11 0 0 0 22 0c0-7-4-12-11-17Z" fill="var(--bark-1)"/>
+        <path d="M20 4c-7 5-11 10-11 17a11 11 0 0 0 11 11V4Z" fill="var(--bark-2)"/>
+        <path d="M20 12v18" stroke="var(--wood-1)" stroke-width="2" stroke-linecap="round"/>
+        <path d="M20 20c3-1 5-3 6-6M20 26c-3-1-5-3-6-6" stroke="var(--wood-2)" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span>
+        <b>চুইঘর</b>
+        <span class="sub">Chuighor · Khulna</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#shop">দোকান</a>
+      <a href="#recipe">রান্নার নিয়ম</a>
+      <a href="#about">চুই কী</a>
+      <a href="#faq">প্রশ্ন</a>
+    </nav>
+    <button class="icon-btn" id="cartBtn" aria-label="কার্ট খুলুন">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6"/><circle cx="10" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/>
+      </svg>
+      কার্ট <span id="cartCount" data-empty="1">০</span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════════════════════  hero  ═══════════════════════════ -->
+<div id="top" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="badge"><i></i> সরাসরি খুলনা–কেশবপুরের বাগান থেকে</span>
+      <h1>মাংসে যে <em>ঝাঁঝ</em> খোঁজেন,<br>সেটার নাম চুই ঝাল।</h1>
+      <p class="lede">
+        গোছা ধরে কাটা, শিকড়সহ খাঁটি চুই — ধুয়ে, ছাল ছাড়িয়ে, রান্নার
+        উপযোগী করে প্যাক করা। সারা দেশে কুরিয়ারে পৌঁছে দিই, ক্যাশ অন ডেলিভারিতে।
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#shop">
+          দাম দেখুন ও অর্ডার করুন
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button class="btn btn-ghost" data-wa-hello>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.3A10 10 0 1 0 12 2Zm5.5 14c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.9-5.2c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.4.7-1.7.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .5.4l.8 1.8c0 .2 0 .3-.1.5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 1.9 2 .3.2.5.2.7 0l.7-.8c.2-.2.3-.2.6-.1l1.7.8c.2.1.3.2.3.3.1.2.1.7-.1 1.3Z"/></svg>
+          হোয়াটসঅ্যাপে কথা বলুন
+        </button>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div id="heroArt" aria-hidden="true"></div>
+      <p class="hero-note">প্রতি গোছা হাতে বাছাই করা — পচা, ফাঁপা বা শুকনো কাণ্ড আমরা পাঠাই না।</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════  trust strip  ═══════════════════════════ -->
+<div class="strip">
+  <div class="wrap" style="padding-inline:0">
+    <ul>
+      <li>
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--leaf)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span><b>১০০% খাঁটি চুই</b><small>মেশানো ডাল-কাঠ নয়, আসল Piper chaba</small></span>
+      </li>
+      <li>
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--turmeric)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>
+        <span><b>২৪–৭২ ঘণ্টায় ডেলিভারি</b><small>ঢাকায় ১ দিন, বাকি দেশে কুরিয়ারে</small></span>
+      </li>
+      <li>
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><circle cx="12" cy="12" r="2.6"/></svg>
+        <span><b>ক্যাশ অন ডেলিভারি</b><small>পণ্য হাতে পেয়ে টাকা দিন</small></span>
+      </li>
+      <li>
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        <span><b>কাটা ও পরিষ্কার</b><small>চাইলে রান্নার মাপে কেটে পাঠাই</small></span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════  shop  ═══════════════════════════ -->
+<section id="shop">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <div class="eyebrow">দোকান · The Shop</div>
+      <h2>ওজন বেছে নিন, কার্টে দিন</h2>
+      <p>দাম কাঁচা মালের বাজারদরের সঙ্গে ওঠানামা করে। এই তালিকা <b>চলতি সপ্তাহের</b> দর।</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════  recipe  ═══════════════════════════ -->
+<section id="recipe" class="alt">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <div class="eyebrow">রান্নার নিয়ম · How to cook</div>
+      <h2>প্রথমবার রাঁধছেন? তিনটে ধাপ মনে রাখলেই হবে</h2>
+    </div>
+    <div class="steps rise">
+      <div class="step">
+        <div class="n">ধাপ ০১ — কাটা</div>
+        <h3>ছাল চেঁছে, গিঁট বাদ</h3>
+        <p>চামচ বা বঁটির উল্টো দিকে হালকা চেঁছে উপরের বাদামি ছাল তুলুন। গিঁটের শক্ত অংশ ফেলে দিন। ১–১.৫ ইঞ্চি মাপে টুকরো করুন — ছোট করলে ঝাঁঝ বেরিয়ে যায়।</p>
+      </div>
+      <div class="step">
+        <div class="n">ধাপ ০২ — কষানো</div>
+        <h3>মাংসের সঙ্গেই কষান</h3>
+        <p>পেঁয়াজ-রসুন-মসলা কষানোর সময় চুই দিয়ে দিন। গরুর মাংসে ২৫০ গ্রাম মাংসে ৩–৪ টুকরো যথেষ্ট। খাসিতে একটু বেশি দিলেও চলে।</p>
+      </div>
+      <div class="step">
+        <div class="n">ধাপ ০৩ — ধৈর্য</div>
+        <h3>কম আঁচে অন্তত ৪০ মিনিট</h3>
+        <p>চুই কাঠের মতো — সময় পেলে তবেই ঝোলে ঝাঁঝ ছাড়ে। ঢাকনা দিয়ে কম আঁচে রাখুন। চিবিয়ে খাওয়ার জন্য টুকরোগুলো নরম হওয়া চাই।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════  about  ═══════════════════════════ -->
+<section id="about">
+  <div class="wrap two">
+    <div class="rise">
+      <div class="eyebrow">চুই কী · What it is</div>
+      <h2 style="font-size:clamp(28px,3.6vw,40px);margin-top:14px">গোলমরিচের আত্মীয়, তবে ঝাল নয় — ঝাঁঝ</h2>
+      <p style="color:var(--ink-2);margin-top:14px">
+        চুই ঝাল একটি লতানো গাছের কাণ্ড ও শিকড় (Piper chaba), গোলমরিচ পরিবারের।
+        মরিচের মতো জ্বালা ধরায় না — বরং ঝোলে একটা উষ্ণ, মিষ্টি-ঝাঁঝালো ঘ্রাণ দেয় আর
+        মাংসের গন্ধ কাটিয়ে দেয়। খুলনা, বাগেরহাট, যশোর আর সাতক্ষীরার রান্নাঘরে
+        এটি বহু পুরনো অভ্যাস — কোরবানির মাংস থেকে বিয়ের খাসি, চুই ছাড়া হয় না।
+      </p>
+      <ul class="facts">
+        <li><span class="k">নাম</span><span><b>চুই ঝাল</b> · Piper chaba (Chui Jhal)</span></li>
+        <li><span class="k">অংশ</span><span>লতার কাণ্ড, ডগা ও শিকড়</span></li>
+        <li><span class="k">স্বাদ</span><span>উষ্ণ ঝাঁঝ, হালকা মিষ্টি ঘ্রাণ, তেতো নয়</span></li>
+        <li><span class="k">জোড়া</span><span>গরু, খাসি, হাঁস, বড় মাছের ঝোল, খিচুড়ি</span></li>
+        <li><span class="k">সংরক্ষণ</span><span>ফ্রিজে ২–৩ মাস, নরমাল বাতাসে ২ সপ্তাহ</span></li>
+      </ul>
+    </div>
+    <div class="rise" style="display:grid;place-items:center">
+      <div id="aboutArt" aria-hidden="true" style="width:100%;max-width:400px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════  faq  ═══════════════════════════ -->
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <div class="eyebrow">সচরাচর প্রশ্ন · FAQ</div>
+      <h2>যা সবাই জিজ্ঞেস করেন</h2>
+    </div>
+    <div class="faq rise">
+      <details open>
+        <summary>মোটা চুই নাকি চিকন — কোনটা নেব?</summary>
+        <p>মোটা গোছার ঝাঁঝ বেশি, চিবিয়ে খেতেও ভালো — গরু ও খাসির জন্য এটাই নিন। চিকন বা কচি চুই তুলনায় নরম, তাড়াতাড়ি সেদ্ধ হয়, হাঁস-মুরগি বা মাছের ঝোলে ভালো লাগে। প্রথমবার হলে মোটা গোছা দিয়েই শুরু করুন।</p>
+      </details>
+      <details>
+        <summary>এক কেজি চুইয়ে কতবার রান্না হবে?</summary>
+        <p>মোটামুটি ২৫০ গ্রাম চুইয়ে ৩–৪ বেলা মাঝারি রান্না (প্রতিবার ১–১.৫ কেজি মাংস) হয়ে যায়। এক কেজি নিলে সাধারণ পরিবারে ২–৩ মাস চলে, কারণ ফ্রিজে রেখে অল্প অল্প করে ব্যবহার করা যায়।</p>
+      </details>
+      <details>
+        <summary>ডেলিভারি চার্জ কত, কত দিনে পাব?</summary>
+        <p>ঢাকার ভিতরে ৳৮০, ঢাকার বাইরে ৳১৩০ (কুরিয়ার)। ৳২০০০ এর বেশি অর্ডারে ডেলিভারি ফ্রি। ঢাকায় সাধারণত ২৪ ঘণ্টা, দেশের বাকি অংশে ৪৮–৭২ ঘণ্টা লাগে।</p>
+      </details>
+      <details>
+        <summary>মাল খারাপ পেলে কী হবে?</summary>
+        <p>প্যাকেট খোলার সময়ের একটা ভিডিও রাখুন। পচা, ফাঁপা বা শুকিয়ে যাওয়া চুই পেলে ২৪ ঘণ্টার মধ্যে হোয়াটসঅ্যাপে ভিডিওসহ জানান — আমরা বদলে দেব বা টাকা ফেরত দেব।</p>
+      </details>
+      <details>
+        <summary>অগ্রিম টাকা দিতে হবে?</summary>
+        <p>না। ঢাকা ও বড় শহরে পুরোটাই ক্যাশ অন ডেলিভারি। দূরের এলাকায় কুরিয়ার কন্ডিশনে গেলে শুধু ডেলিভারি চার্জটা অগ্রিম বিকাশে নিই, বাকি টাকা মাল হাতে পেয়ে দেবেন।</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════  footer  ═══════════════════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand" style="gap:10px">
+          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M20 4c-7 5-11 10-11 17a11 11 0 0 0 22 0c0-7-4-12-11-17Z" fill="var(--bark-1)"/>
+            <path d="M20 4c-7 5-11 10-11 17a11 11 0 0 0 11 11V4Z" fill="var(--bark-2)"/>
+            <path d="M20 12v18" stroke="var(--wood-1)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span><b style="font-family:var(--font-display);font-size:23px">চুইঘর</b></span>
+        </div>
+        <p style="max-width:34ch">খুলনার চুই ঝাল, সারা দেশে। ছোট পরিসরে, হাতে বাছাই করে — যতটুকু ভালো, ততটুকুই পাঠাই।</p>
+      </div>
+      <div>
+        <h4>যোগাযোগ</h4>
+        <a href="#" data-tel>ফোন: <span data-phone-txt></span></a>
+        <a href="#" data-wa-hello>হোয়াটসঅ্যাপ</a>
+        <a href="#" data-fb target="_blank" rel="noopener">ফেসবুক পেজ</a>
+      </div>
+      <div>
+        <h4>তথ্য</h4>
+        <a href="#shop">পণ্য ও দাম</a>
+        <a href="#recipe">রান্নার নিয়ম</a>
+        <a href="#faq">ডেলিভারি ও ফেরত</a>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="yr"></span> চুইঘর · Chuighor</span>
+      <span>খুলনা, বাংলাদেশ · ক্যাশ অন ডেলিভারি</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════  cart drawer  ═══════════════════════════ -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="কার্ট" aria-hidden="true">
+  <div class="drawer-head">
+    <h2>আপনার কার্ট</h2>
+    <button class="close" id="closeCart" aria-label="বন্ধ করুন">×</button>
+  </div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot">
+    <div>
+      <div class="eyebrow" style="margin-bottom:8px">ডেলিভারি এলাকা</div>
+      <div class="zone" id="zone">
+        <button data-zone="dhaka" aria-pressed="true">ঢাকার ভিতরে · ৳৮০</button>
+        <button data-zone="outside" aria-pressed="false">ঢাকার বাইরে · ৳১৩০</button>
+      </div>
+    </div>
+    <div class="sum" id="sum"></div>
+    <button class="btn btn-primary btn-wide" id="toForm">অর্ডার ফর্ম পূরণ করুন</button>
+    <button class="btn btn-wide wa" id="waOrder">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.3A10 10 0 1 0 12 2Zm5.5 14c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1a11 11 0 0 1-5.9-5.2c-.4-.7-.7-1.5-.7-2.2 0-.8.4-1.4.7-1.7.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .5.4l.8 1.8c0 .2 0 .3-.1.5l-.4.5c-.1.2-.3.3-.1.6.5.9 1.1 1.5 1.9 2 .3.2.5.2.7 0l.7-.8c.2-.2.3-.2.6-.1l1.7.8c.2.1.3.2.3.3.1.2.1.7-.1 1.3Z"/></svg>
+      সরাসরি হোয়াটসঅ্যাপে পাঠান
+    </button>
+  </div>
+</aside>
+
+<!-- ═══════════════════════════  order modal  ═══════════════════════════ -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="অর্ডার ফর্ম">
+  <div class="sheet" id="sheet">
+    <header>
+      <h2 id="sheetTitle">অর্ডার ফর্ম</h2>
+      <button class="close" id="closeModal" aria-label="বন্ধ করুন">×</button>
+    </header>
+    <form id="orderForm" novalidate>
+      <div class="field" data-f="name">
+        <label for="f-name">আপনার নাম <span>*</span></label>
+        <input id="f-name" name="name" autocomplete="name" placeholder="যেমন: রফিকুল ইসলাম">
+        <small class="err">নামটা লিখুন।</small>
+      </div>
+      <div class="row2">
+        <div class="field" data-f="phone">
+          <label for="f-phone">মোবাইল নম্বর <span>*</span></label>
+          <input id="f-phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="01XXXXXXXXX">
+          <small class="err">১১ ডিজিটের সঠিক নম্বর দিন।</small>
+        </div>
+        <div class="field" data-f="district">
+          <label for="f-district">জেলা <span>*</span></label>
+          <input id="f-district" name="district" placeholder="যেমন: ঢাকা">
+          <small class="err">জেলার নাম লিখুন।</small>
+        </div>
+      </div>
+      <div class="field" data-f="address">
+        <label for="f-address">পুরো ঠিকানা <span>*</span></label>
+        <textarea id="f-address" name="address" placeholder="বাসা/হোল্ডিং, রোড, এলাকা, থানা — কুরিয়ারের লোক যেন খুঁজে পান"></textarea>
+        <small class="err">ঠিকানাটা একটু বিস্তারিত লিখুন।</small>
+      </div>
+      <div class="field">
+        <label for="f-note">বিশেষ নির্দেশনা</label>
+        <textarea id="f-note" name="note" placeholder="যেমন: ছাল ছাড়িয়ে কেটে দেবেন / শুক্রবার সকালে ডেলিভারি চাই" style="min-height:56px"></textarea>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:8px">অর্ডার সারাংশ</div>
+        <div class="recap mono" id="recap"></div>
+      </div>
+      <button class="btn btn-primary btn-wide" type="submit">অর্ডার কনফার্ম করুন</button>
+      <p style="font-size:12.5px;color:var(--ink-2);text-align:center;margin-top:-4px">
+        কনফার্ম করলে অর্ডারটি হোয়াটসঅ্যাপে পাঠানোর জন্য তৈরি হবে। কোনো অগ্রিম টাকা লাগবে না।
+      </p>
+    </form>
+    <div class="done" id="done" hidden>
+      <div class="tick">✓</div>
+      <h3>অর্ডার তৈরি হয়েছে</h3>
+      <p>শেষ ধাপ — নিচের বোতামে চাপ দিয়ে অর্ডারটি আমাদের কাছে পাঠান। আমরা ১৫–৩০ মিনিটের মধ্যে ফোন করে কনফার্ম করব।</p>
+      <div class="recap mono" id="doneRecap" style="text-align:left"></div>
+      <button class="btn btn-wide wa" id="doneWa">হোয়াটসঅ্যাপে পাঠান</button>
+      <button class="btn btn-ghost btn-wide" id="doneFb">মেসেঞ্জারে পাঠাতে ফেসবুক পেজে যান</button>
+      <button class="btn btn-ghost btn-wide" id="doneCopy">অর্ডারটি কপি করুন</button>
+      <button class="btn btn-ghost btn-wide" id="doneClose" style="border:0">বন্ধ করুন</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════════════
+   ১. দোকানের তথ্য — এই অংশটুকু বদলালেই সাইট আপনার হয়ে যাবে
+   SHOP SETTINGS — edit this block only
+   ══════════════════════════════════════════════════════════════════════ */
+const SHOP = {
+  name: "চুইঘর",
+  phone: "01XXXXXXXXX",                     // আপনার নম্বর
+  whatsapp: "8801XXXXXXXXX",                // দেশের কোড সহ, + বা স্পেস ছাড়া
+  facebook: "https://facebook.com/",        // আপনার পেজের লিংক
+  delivery: { dhaka: 80, outside: 130, freeAbove: 2000 }
+};
+
+/* ══════════  ২. পণ্যের তালিকা — নাম, দাম, ওজন এখানে বদলান  ══════════ */
+const PRODUCTS = [
+  { id:"mota", bn:"চুই ঝাল — মোটা গোছা", en:"Thick Stem", seed:7, kind:"stem",
+    tag:"সবচেয়ে জনপ্রিয়",
+    desc:"পুরনো লতার মোটা কাণ্ড। ঝাঁঝ সবচেয়ে বেশি, চিবিয়ে খেতেও দারুণ। গরু ও খাসির জন্য এটাই নিন।",
+    variants:[{w:"২৫০ গ্রাম",p:320},{w:"৫০০ গ্রাম",p:610},{w:"১ কেজি",p:1180}] },
+
+  { id:"chikon", bn:"চুই ঝাল — চিকন কচি", en:"Tender Vine", seed:13, kind:"vine",
+    desc:"নরম, তাড়াতাড়ি সেদ্ধ হয়। হাঁস, মুরগি, বড় মাছের ঝোল আর খিচুড়িতে ভালো মানায়।",
+    variants:[{w:"২৫০ গ্রাম",p:260},{w:"৫০০ গ্রাম",p:490},{w:"১ কেজি",p:940}] },
+
+  { id:"shikor", bn:"চুই শিকড়", en:"Chui Root", seed:21, kind:"root",
+    tag:"সীমিত",
+    desc:"মাটির নিচের অংশ — ঘ্রাণ আর ঝাঁঝ দুটোই সবচেয়ে চড়া। অল্প দিলেই পুরো ঝোল বদলে যায়।",
+    variants:[{w:"২৫০ গ্রাম",p:450},{w:"৫০০ গ্রাম",p:860}] },
+
+  { id:"cut", bn:"কাটা ও পরিষ্কার চুই", en:"Cut & Cleaned", seed:34, kind:"cut",
+    tag:"রেডি টু কুক", tagKind:"leaf",
+    desc:"ছাল ছাড়ানো, ধোয়া, ১ ইঞ্চি মাপে কাটা। হাঁড়িতে ঢেলে দিলেই হলো — ব্যস্ত রান্নাঘরের জন্য।",
+    variants:[{w:"২৫০ গ্রাম",p:380},{w:"৫০০ গ্রাম",p:720}] },
+
+  { id:"gura", bn:"চুই ঝাল গুঁড়া", en:"Chui Powder", seed:5, kind:"powder",
+    desc:"শুকিয়ে গুঁড়া করা চুই। ঝোলে টুকরো না চাইলে, বা ভুনা-খিচুড়িতে এক চিমটি দিতে।",
+    variants:[{w:"১০০ গ্রাম",p:300},{w:"২৫০ গ্রাম",p:690}] },
+
+  { id:"family", bn:"পারিবারিক কম্বো", en:"Family Combo", seed:41, kind:"combo",
+    tag:"সাশ্রয়ী",
+    desc:"৭৫০ গ্রাম মোটা গোছা + ২৫০ গ্রাম শিকড় একসঙ্গে। কোরবানি বা বড় দাওয়াতের জন্য।",
+    variants:[{w:"১ কেজি বক্স",p:1290}] }
+];
+
+/* ══════════════════════  ৩. ছোট ছোট সহায়ক ফাংশন  ══════════════════════ */
+const bnDigits = "০১২৩৪৫৬৭৮৯";
+const bn = n => String(n).replace(/\d/g, d => bnDigits[d]);
+const taka = n => "৳" + bn(n.toLocaleString("en-US"));
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+
+/* ── চুই ঝালের ছবি: এসভিজি দিয়ে আঁকা কাণ্ডের টুকরো ────────────────────
+   Hand-drawn look: each "log" is a bark body with striations and a pale
+   cut face at one end. Seeded so every product looks consistent. */
+function log(rnd, x, y, len, thick, rot){
+  const r = thick/2, s = [];
+  const bark = ["var(--bark-1)","var(--bark-3)"][Math.floor(rnd()*2)];
+  s.push(`<g transform="translate(${x} ${y}) rotate(${rot})">`);
+  s.push(`<rect x="${-len/2}" y="${-r}" width="${len}" height="${thick}" rx="${r}" fill="${bark}"/>`);
+  s.push(`<rect x="${-len/2}" y="${-r}" width="${len}" height="${thick*0.42}" rx="${r*0.8}" fill="var(--bark-1)" opacity=".55"/>`);
+  // bark striations
+  const n = Math.round(len/9);
+  for(let i=0;i<n;i++){
+    const px = -len/2 + 6 + i*(len-12)/Math.max(n-1,1);
+    const dip = (rnd()*0.5+0.3)*r;
+    s.push(`<path d="M ${px} ${-r+2} q ${rnd()*4-2} ${r} 0 ${2*r-4}" stroke="var(--bark-2)" stroke-width="${(rnd()*0.9+0.6).toFixed(1)}" fill="none" opacity=".5"/>`);
+    if(rnd()>0.72) s.push(`<circle cx="${px}" cy="${dip-r*0.2}" r="${(rnd()*1.6+1).toFixed(1)}" fill="var(--pith)" opacity=".55"/>`);
+  }
+  // knot
+  if(rnd()>0.5){
+    const kx = -len/4 + rnd()*len/2;
+    s.push(`<ellipse cx="${kx}" cy="${-r*0.15}" rx="${r*0.5}" ry="${r*0.75}" fill="var(--bark-2)" opacity=".7"/>`);
+  }
+  // cut face
+  s.push(`<ellipse cx="${len/2-1}" cy="0" rx="${r*0.42}" ry="${r*0.95}" fill="var(--wood-1)"/>`);
+  s.push(`<ellipse cx="${len/2-1}" cy="0" rx="${r*0.2}" ry="${r*0.48}" fill="var(--wood-2)"/>`);
+  s.push(`<ellipse cx="${len/2-1}" cy="0" rx="${r*0.07}" ry="${r*0.18}" fill="var(--pith)"/>`);
+  s.push(`</g>`);
+  return s.join("");
+}
+function leaf(x,y,rot,scale){
+  return `<g transform="translate(${x} ${y}) rotate(${rot}) scale(${scale})">
+    <path d="M0 0 C 22 -20 52 -18 66 0 C 52 18 22 20 0 0 Z" fill="var(--leaf)" opacity=".92"/>
+    <path d="M2 0 H 62" stroke="var(--wood-1)" stroke-width="1.6" opacity=".55"/>
+    <path d="M16 -1 l 10 -8 M30 -1 l 10 -8 M16 1 l 10 8 M30 1 l 10 8" stroke="var(--wood-1)" stroke-width="1" opacity=".35" fill="none"/>
+  </g>`;
+}
+function art(seed, kind, w, h){
+  const rnd = mulberry32(seed*991 + 17);
+  let g = "";
+  if(kind === "powder"){
+    // a heap of ground chui + a couple of small pieces
+    g += `<ellipse cx="${w/2}" cy="${h*0.74}" rx="${w*0.3}" ry="${h*0.09}" fill="var(--bark-2)" opacity=".25"/>`;
+    g += `<path d="M ${w*0.22} ${h*0.74} Q ${w*0.5} ${h*0.3} ${w*0.78} ${h*0.74} Z" fill="var(--bark-1)"/>`;
+    g += `<path d="M ${w*0.30} ${h*0.74} Q ${w*0.5} ${h*0.42} ${w*0.62} ${h*0.74} Z" fill="var(--bark-3)" opacity=".85"/>`;
+    for(let i=0;i<70;i++){
+      const t = rnd(), px = w*0.24 + rnd()*w*0.52, py = h*0.5 + rnd()*h*0.24;
+      g += `<circle cx="${px.toFixed(1)}" cy="${py.toFixed(1)}" r="${(rnd()*1.5+0.6).toFixed(1)}" fill="${t>0.5?"var(--pith)":"var(--bark-2)"}" opacity=".7"/>`;
+    }
+    g += log(rnd, w*0.2, h*0.8, w*0.2, h*0.09, -8);
+    return g;
+  }
+  if(kind === "cut"){
+    const cols = 4, rows = 2;
+    for(let r=0;r<rows;r++) for(let c=0;c<cols;c++){
+      const px = w*0.2 + c*(w*0.6/(cols-1)) + (rnd()*10-5);
+      const py = h*0.4 + r*(h*0.28) + (rnd()*8-4);
+      g += log(rnd, px, py, w*0.16, h*0.13, rnd()*40-20);
+    }
+    return g;
+  }
+  if(kind === "root"){
+    g += log(rnd, w*0.5, h*0.55, w*0.56, h*0.2, -9);
+    g += log(rnd, w*0.36, h*0.74, w*0.34, h*0.12, 24);
+    g += log(rnd, w*0.66, h*0.76, w*0.3, h*0.1, -32);
+    g += log(rnd, w*0.5, h*0.36, w*0.28, h*0.09, 12);
+    return g;
+  }
+  if(kind === "combo"){
+    for(let i=0;i<5;i++)
+      g += log(rnd, w*0.28 + rnd()*w*0.44, h*0.35 + rnd()*h*0.4, w*(0.3+rnd()*0.28), h*(0.09+rnd()*0.07), rnd()*70-35);
+    g += leaf(w*0.62, h*0.24, 18, 0.5);
+    return g;
+  }
+  if(kind === "vine"){
+    // slimmer, younger stems with a leaf
+    g += leaf(w*0.12, h*0.26, -18, 0.52);
+    g += log(rnd, w*0.52, h*0.58, w*0.70, h*0.10, -8);
+    g += log(rnd, w*0.46, h*0.40, w*0.58, h*0.08, 11);
+    g += log(rnd, w*0.55, h*0.76, w*0.52, h*0.075, -19);
+    g += log(rnd, w*0.40, h*0.88, w*0.36, h*0.06, 14);
+    return g;
+  }
+  // thick stem
+  g += log(rnd, w*0.5, h*0.6, w*0.66, h*0.19, -11);
+  g += log(rnd, w*0.44, h*0.36, w*0.5, h*0.16, 9);
+  g += log(rnd, w*0.56, h*0.8, w*0.44, h*0.15, -24);
+  return g;
+}
+function svg(seed, kind, w=320, h=200){
+  return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="চুই ঝালের টুকরো">${art(seed,kind,w,h)}</svg>`;
+}
+
+/* ══════════════════════  ৪. হিরো ও অ্যাবাউট ছবি  ══════════════════════ */
+(function heroArt(){
+  const w = 460, h = 360, rnd = mulberry32(2024);
+  let g = `<ellipse cx="${w*0.5}" cy="${h*0.88}" rx="${w*0.36}" ry="${h*0.05}" fill="var(--bark-2)" opacity=".18"/>`;
+  g += leaf(w*0.10, h*0.30, -24, 0.95);
+  g += leaf(w*0.62, h*0.16, 12, 0.8);
+  g += log(rnd, w*0.52, h*0.72, w*0.74, h*0.13, -7);
+  g += log(rnd, w*0.46, h*0.56, w*0.66, h*0.11, 8);
+  g += log(rnd, w*0.55, h*0.42, w*0.5, h*0.09, -16);
+  g += log(rnd, w*0.36, h*0.82, w*0.42, h*0.08, 19);
+  g += log(rnd, w*0.70, h*0.84, w*0.36, h*0.07, -28);
+  $("#heroArt").innerHTML = `<svg viewBox="0 0 ${w} ${h}" aria-hidden="true">${g}</svg>`;
+
+  const w2 = 400, h2 = 320, r2 = mulberry32(77);
+  let a = `<circle cx="${w2/2}" cy="${h2/2}" r="${w2*0.38}" fill="var(--surface-2)"/>`;
+  a += `<circle cx="${w2/2}" cy="${h2/2}" r="${w2*0.38}" fill="none" stroke="var(--line)" stroke-width="1"/>`;
+  a += leaf(w2*0.22, h2*0.32, -20, 0.8);
+  a += log(r2, w2*0.52, h2*0.56, w2*0.5, h2*0.15, -12);
+  a += log(r2, w2*0.46, h2*0.72, w2*0.4, h2*0.1, 16);
+  a += `<text x="${w2/2}" y="${h2*0.93}" text-anchor="middle" style="font-family:var(--font-mono);font-size:11px;letter-spacing:3px;fill:var(--ink-2)">PIPER CHABA</text>`;
+  $("#aboutArt").innerHTML = `<svg viewBox="0 0 ${w2} ${h2}" aria-hidden="true">${a}</svg>`;
+})();
+
+/* ══════════════════════  ৫. পণ্য গ্রিড  ══════════════════════ */
+const chosen = {};   // productId -> variant index
+PRODUCTS.forEach(p => chosen[p.id] = 0);
+
+function renderGrid(){
+  $("#grid").innerHTML = PRODUCTS.map(p => {
+    const v = p.variants[chosen[p.id]];
+    return `<article class="card rise">
+      <div class="card-art">
+        ${p.tag ? `<span class="tag" ${p.tagKind?`data-kind="${p.tagKind}"`:""}>${p.tag}</span>` : ""}
+        ${svg(p.seed, p.kind)}
+      </div>
+      <div class="card-body">
+        <div>
+          <h3>${p.bn}</h3>
+          <div class="en">${p.en}</div>
+        </div>
+        <p class="desc">${p.desc}</p>
+        <div class="variants" role="group" aria-label="ওজন নির্বাচন">
+          ${p.variants.map((v,i)=>`<button type="button" data-pick="${p.id}" data-i="${i}" aria-pressed="${i===chosen[p.id]}">${v.w}</button>`).join("")}
+        </div>
+        <div class="buyrow">
+          <div class="price">${taka(v.p)}<small>${v.w}</small></div>
+          <button class="add" data-add="${p.id}">কার্টে দিন</button>
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+  observeRise();
+}
+
+/* ══════════════════════  ৬. কার্ট  ══════════════════════ */
+let cart = [];       // {id, vi, qty}
+let zone = "dhaka";
+
+function saveCart(){
+  try{ localStorage.setItem("chuighor.cart", JSON.stringify({cart, zone})); }catch(e){}
+}
+function loadCart(){
+  try{
+    const raw = localStorage.getItem("chuighor.cart");
+    if(!raw) return;
+    const d = JSON.parse(raw);
+    if(Array.isArray(d.cart)) cart = d.cart.filter(l => PRODUCTS.some(p=>p.id===l.id));
+    if(d.zone==="dhaka"||d.zone==="outside") zone = d.zone;
+  }catch(e){}
+}
+const prod = id => PRODUCTS.find(p => p.id === id);
+const lineTotal = l => prod(l.id).variants[l.vi].p * l.qty;
+const subtotal = () => cart.reduce((s,l)=>s+lineTotal(l),0);
+function shipping(){
+  if(!cart.length) return 0;
+  if(subtotal() >= SHOP.delivery.freeAbove) return 0;
+  return zone === "dhaka" ? SHOP.delivery.dhaka : SHOP.delivery.outside;
+}
+const grand = () => subtotal() + shipping();
+
+function addToCart(id){
+  const vi = chosen[id];
+  const found = cart.find(l => l.id===id && l.vi===vi);
+  if(found) found.qty++;
+  else cart.push({id, vi, qty:1});
+  renderCart(); saveCart();
+  toast(`${prod(id).bn} (${prod(id).variants[vi].w}) কার্টে যোগ হয়েছে`);
+}
+function renderCart(){
+  const c = cart.reduce((s,l)=>s+l.qty,0);
+  const badge = $("#cartCount");
+  badge.textContent = bn(c);
+  badge.dataset.empty = c ? "0" : "1";
+
+  if(!cart.length){
+    $("#cartBody").innerHTML = `<div class="empty">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 7H6"/><circle cx="10" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg>
+      <div>কার্ট এখনো খালি।<br>পছন্দের চুই বেছে কার্টে দিন।</div>
+    </div>`;
+  } else {
+    $("#cartBody").innerHTML = cart.map((l,i)=>{
+      const p = prod(l.id), v = p.variants[l.vi];
+      return `<div class="line">
+        <div class="thumb">${svg(p.seed, p.kind, 120, 100)}</div>
+        <div>
+          <b>${p.bn}</b>
+          <small>${v.w} · ${taka(v.p)}</small>
+          <div class="qty">
+            <button data-q="-1" data-i="${i}" aria-label="কমান">−</button>
+            <span>${bn(l.qty)}</span>
+            <button data-q="1" data-i="${i}" aria-label="বাড়ান">+</button>
+            <button class="rm" data-rm="${i}">বাদ</button>
+          </div>
+        </div>
+        <div class="amt">${taka(lineTotal(l))}</div>
+      </div>`;
+    }).join("");
+  }
+
+  const free = cart.length && subtotal() >= SHOP.delivery.freeAbove;
+  $("#sum").innerHTML = `
+    <div><span class="muted">সাবটোটাল</span><span>${taka(subtotal())}</span></div>
+    <div><span class="muted">ডেলিভারি চার্জ</span><span>${free ? "ফ্রি" : taka(shipping())}</span></div>
+    ${!free && cart.length ? `<div style="font-size:12.5px;color:var(--ink-2)">
+        <span>আর ${taka(SHOP.delivery.freeAbove - subtotal())} যোগ করলে ডেলিভারি ফ্রি</span><span></span></div>` : ""}
+    <div class="t"><span>সর্বমোট</span><span>${taka(grand())}</span></div>`;
+
+  $$("#zone button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.zone === zone)));
+  $("#toForm").disabled = !cart.length;
+  $("#waOrder").disabled = !cart.length;
+  renderRecap();
+}
+
+/* ══════════════════════  ৭. অর্ডার টেক্সট  ══════════════════════ */
+function orderLines(){
+  return cart.map(l=>{
+    const p = prod(l.id), v = p.variants[l.vi];
+    return `• ${p.bn} — ${v.w} × ${l.qty} = ${v.p*l.qty} Tk`;
+  }).join("\n");
+}
+function orderText(cust){
+  const free = subtotal() >= SHOP.delivery.freeAbove;
+  let t = `আসসালামু আলাইকুম, ${SHOP.name} — অর্ডার করতে চাই।\n\n`;
+  t += orderLines();
+  t += `\n\nসাবটোটাল: ${subtotal()} Tk`;
+  t += `\nডেলিভারি (${zone==="dhaka"?"ঢাকার ভিতরে":"ঢাকার বাইরে"}): ${free ? "ফ্রি" : shipping()+" Tk"}`;
+  t += `\nসর্বমোট: ${grand()} Tk (ক্যাশ অন ডেলিভারি)`;
+  if(cust){
+    t += `\n\n— ডেলিভারির তথ্য —\nনাম: ${cust.name}\nমোবাইল: ${cust.phone}\nজেলা: ${cust.district}\nঠিকানা: ${cust.address}`;
+    if(cust.note) t += `\nনির্দেশনা: ${cust.note}`;
+  }
+  return t;
+}
+function renderRecap(){
+  const txt = cart.length ? orderText(null) : "কার্ট খালি।";
+  $("#recap").textContent = txt;
+}
+const waLink = txt => `https://wa.me/${SHOP.whatsapp}?text=${encodeURIComponent(txt)}`;
+
+/* ══════════════════════  ৮. ইভেন্ট  ══════════════════════ */
+function toast(msg){
+  const t = $("#toast");
+  t.textContent = msg;
+  t.dataset.show = "1";
+  clearTimeout(t._t);
+  t._t = setTimeout(()=>t.dataset.show="0", 2400);
+}
+function openCart(){
+  $("#drawer").dataset.open="1"; $("#scrim").dataset.open="1";
+  $("#drawer").setAttribute("aria-hidden","false");
+  $("#closeCart").focus();
+}
+function closeCart(){
+  $("#drawer").dataset.open="0"; $("#scrim").dataset.open="0";
+  $("#drawer").setAttribute("aria-hidden","true");
+}
+function openModal(){
+  renderRecap();
+  $("#orderForm").hidden = false; $("#done").hidden = true;
+  $("#sheetTitle").textContent = "অর্ডার ফর্ম";
+  $("#modal").dataset.open="1";
+  setTimeout(()=>$("#f-name").focus(), 60);
+}
+function closeModal(){ $("#modal").dataset.open="0"; }
+
+document.addEventListener("click", e => {
+  const t = e.target;
+
+  const pick = t.closest("[data-pick]");
+  if(pick){
+    const id = pick.dataset.pick;
+    chosen[id] = +pick.dataset.i;
+    const card = pick.closest(".card");
+    card.querySelectorAll("[data-pick]").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.i === chosen[id])));
+    const v = prod(id).variants[chosen[id]];
+    card.querySelector(".price").innerHTML = `${taka(v.p)}<small>${v.w}</small>`;
+    return;
+  }
+
+  const add = t.closest("[data-add]");
+  if(add){
+    addToCart(add.dataset.add);
+    add.dataset.added="1"; add.textContent="যোগ হয়েছে ✓";
+    setTimeout(()=>{ add.dataset.added="0"; add.textContent="কার্টে দিন"; }, 1400);
+    return;
+  }
+
+  const q = t.closest("[data-q]");
+  if(q){
+    const l = cart[+q.dataset.i];
+    l.qty += +q.dataset.q;
+    if(l.qty < 1) cart.splice(+q.dataset.i,1);
+    renderCart(); saveCart(); return;
+  }
+  const rm = t.closest("[data-rm]");
+  if(rm){ cart.splice(+rm.dataset.rm,1); renderCart(); saveCart(); return; }
+
+  const z = t.closest("[data-zone]");
+  if(z){ zone = z.dataset.zone; renderCart(); saveCart(); return; }
+
+  if(t.closest("[data-wa-hello]")){
+    e.preventDefault();
+    window.open(waLink(`আসসালামু আলাইকুম, ${SHOP.name} — চুই ঝাল সম্পর্কে জানতে চাই।`), "_blank", "noopener");
+    return;
+  }
+  if(t.closest("[data-fb]")){ e.preventDefault(); window.open(SHOP.facebook, "_blank", "noopener"); return; }
+  if(t.closest("[data-tel]")){ e.preventDefault(); location.href = "tel:" + SHOP.phone; return; }
+});
+
+$("#cartBtn").addEventListener("click", openCart);
+$("#closeCart").addEventListener("click", closeCart);
+$("#scrim").addEventListener("click", closeCart);
+$("#toForm").addEventListener("click", ()=>{ closeCart(); openModal(); });
+$("#waOrder").addEventListener("click", ()=> window.open(waLink(orderText(null)), "_blank", "noopener"));
+$("#closeModal").addEventListener("click", closeModal);
+$("#modal").addEventListener("click", e => { if(e.target.id === "modal") closeModal(); });
+document.addEventListener("keydown", e => { if(e.key === "Escape"){ closeCart(); closeModal(); } });
+
+$("#orderForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target;
+  const val = k => f.elements[k].value.trim();
+  const cust = {
+    name: val("name"),
+    phone: val("phone"),
+    district: val("district"),
+    address: val("address"),
+    note: val("note")
+  };
+  const bad = [];
+  if(cust.name.length < 2) bad.push("name");
+  if(!/^01[3-9]\d{8}$/.test(cust.phone.replace(/[\s-]/g,""))) bad.push("phone");
+  if(cust.district.length < 2) bad.push("district");
+  if(cust.address.length < 10) bad.push("address");
+  $$("[data-f]").forEach(el => el.dataset.err = bad.includes(el.dataset.f) ? "1" : "0");
+  if(bad.length){ $(`[data-f="${bad[0]}"] input, [data-f="${bad[0]}"] textarea`).focus(); return; }
+
+  const txt = orderText(cust);
+  $("#doneRecap").textContent = txt;
+  $("#doneWa").onclick = () => window.open(waLink(txt), "_blank", "noopener");
+  $("#doneFb").onclick = () => {
+    navigator.clipboard?.writeText(txt).catch(()=>{});
+    toast("অর্ডারটি কপি হয়েছে — পেজে গিয়ে পেস্ট করুন");
+    window.open(SHOP.facebook, "_blank", "noopener");
+  };
+  $("#doneCopy").onclick = () => {
+    navigator.clipboard?.writeText(txt).then(()=>toast("কপি হয়েছে")).catch(()=>toast("কপি করা গেল না — টেক্সট সিলেক্ট করে নিন"));
+  };
+  f.hidden = true;
+  $("#done").hidden = false;
+  $("#sheetTitle").textContent = "প্রায় হয়ে গেছে";
+});
+$("#doneClose").addEventListener("click", closeModal);
+
+/* ══════════════════════  ৯. স্ক্রল অ্যানিমেশন ও শুরু  ══════════════════════ */
+let io;
+function observeRise(){
+  if(!("IntersectionObserver" in window)){ $$(".rise").forEach(el=>el.classList.add("in")); return; }
+  io = io || new IntersectionObserver((entries)=>{
+    entries.forEach(en => { if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, {rootMargin:"0px 0px -60px 0px"});
+  $$(".rise:not(.in)").forEach(el => io.observe(el));
+}
+
+$("#yr").textContent = bn(new Date().getFullYear());
+$$("[data-phone-txt]").forEach(el => el.textContent = SHOP.phone);
+loadCart();
+renderGrid();
+renderCart();
+observeRise();
+</script>
+
+</body>
+</html>
