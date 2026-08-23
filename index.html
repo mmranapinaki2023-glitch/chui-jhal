@@ -88,6 +88,7 @@
 
 /* ─────────────────────────────  base  ───────────────────────────── */
 *{box-sizing:border-box}
+[hidden]{display:none !important}   /* hidden দিলে যেন সত্যিই লুকায় */
 html{scroll-behavior:smooth}
 body{
   margin:0;
@@ -750,12 +751,10 @@ footer{background:var(--surface);border-top:1px solid var(--line);padding-block:
     </form>
     <div class="done" id="done" hidden>
       <div class="tick">✓</div>
-      <h3>অর্ডার তৈরি হয়েছে</h3>
-      <p>শেষ ধাপ — নিচের বোতামে চাপ দিয়ে অর্ডারটি আমাদের কাছে পাঠান। আমরা 15–30 মিনিটের মধ্যে ফোন করে কনফার্ম করব।</p>
+      <h3>অর্ডার পাঠানো হয়েছে</h3>
+      <p>অর্ডারটি হোয়াটসঅ্যাপে চলে গেছে। আমরা 15–30 মিনিটের মধ্যে ফোন করে কনফার্ম করব।</p>
       <div class="recap mono" id="doneRecap" style="text-align:left"></div>
-      <button class="btn btn-wide wa" id="doneWa">হোয়াটসঅ্যাপে পাঠান</button>
-      <button class="btn btn-ghost btn-wide" id="doneFb">মেসেঞ্জারে পাঠাতে ফেসবুক পেজে যান</button>
-      <button class="btn btn-ghost btn-wide" id="doneCopy">অর্ডারটি কপি করুন</button>
+      <p style="font-size:12.5px">হোয়াটসঅ্যাপ না খুললে <a href="#" id="doneWa" style="color:var(--accent);font-weight:600">এখানে চাপ দিন</a>।</p>
       <button class="btn btn-ghost btn-wide" id="doneClose" style="border:0">বন্ধ করুন</button>
     </div>
   </div>
@@ -1186,18 +1185,12 @@ $("#orderForm").addEventListener("submit", e => {
 
   const txt = orderText(cust);
   $("#doneRecap").textContent = txt;
-  $("#doneWa").onclick = () => window.open(waLink(txt), "_blank", "noopener");
-  $("#doneFb").onclick = () => {
-    navigator.clipboard?.writeText(txt).catch(()=>{});
-    toast("অর্ডারটি কপি হয়েছে — পেজে গিয়ে পেস্ট করুন");
-    window.open(SHOP.facebook, "_blank", "noopener");
-  };
-  $("#doneCopy").onclick = () => {
-    navigator.clipboard?.writeText(txt).then(()=>toast("কপি হয়েছে")).catch(()=>toast("কপি করা গেল না — টেক্সট সিলেক্ট করে নিন"));
-  };
+  /* কনফার্ম করলেই অর্ডারটি সরাসরি হোয়াটসঅ্যাপে চলে যায় */
+  window.open(waLink(txt), "_blank", "noopener");
+  $("#doneWa").onclick = ev => { ev.preventDefault(); window.open(waLink(txt), "_blank", "noopener"); };
   f.hidden = true;
   $("#done").hidden = false;
-  $("#sheetTitle").textContent = "প্রায় হয়ে গেছে";
+  $("#sheetTitle").textContent = "অর্ডার পাঠানো হয়েছে";
 });
 $("#doneClose").addEventListener("click", closeModal);
 
