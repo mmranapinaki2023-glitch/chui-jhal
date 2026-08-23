@@ -222,6 +222,8 @@ section{padding-block:74px}
   border-bottom:1px solid var(--line);
 }
 .card-art svg{width:78%;filter:drop-shadow(0 12px 16px rgba(43,26,17,.25))}
+.card-art img{width:100%;height:100%;object-fit:cover;display:block}
+.card-art:has(img) .tag{left:auto;right:12px}
 .tag{
   position:absolute;top:12px;left:12px;font-family:var(--font-body);font-size:12.5px;font-weight:600;
   letter-spacing:.02em;background:var(--accent);color:var(--accent-ink);
@@ -321,6 +323,7 @@ details p{padding:0 40px 20px 0;color:var(--ink-2);font-size:16px}
   border:1px solid var(--line);display:grid;place-items:center;overflow:hidden;
 }
 .line .thumb svg{width:84%}
+.line .thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .line b{display:block;font-size:15.5px;font-weight:600;line-height:1.3}
 .line small{color:var(--ink-2);font-size:13.5px;font-variant-numeric:tabular-nums}
 .qty{display:flex;align-items:center;gap:9px;margin-top:6px}
@@ -759,6 +762,7 @@ const SHOP = {
 /* ══════════  ২. পণ্যের তালিকা — নাম, দাম, ওজন এখানে বদলান  ══════════ */
 const PRODUCTS = [
   { id:"mota", bn:"চুই ঝাল — মোটা গোছা", en:"Thick Stem", seed:7, kind:"stem",
+    pic:"images/mota.jpg",                  // ছবি বদলাতে হলে এই ফাইলটি বদলান
     tag:"সবচেয়ে জনপ্রিয়",
     desc:"পুরনো লতার মোটা কাণ্ড। ঝাঁঝ সবচেয়ে বেশি, চিবিয়ে খেতেও দারুণ। গরু ও খাসির জন্য এটাই নিন।",
     variants:[{w:"২৫০ গ্রাম",p:320},{w:"৫০০ গ্রাম",p:610},{w:"১ কেজি",p:1180}] },
@@ -887,6 +891,12 @@ function art(seed, kind, w, h){
 function svg(seed, kind, w=320, h=200){
   return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="চুই ঝালের টুকরো">${art(seed,kind,w,h)}</svg>`;
 }
+/* পণ্যের ছবি থাকলে ছবি, না থাকলে আঁকা ছবি */
+function media(p, w=320, h=200){
+  return p.pic
+    ? `<img src="${p.pic}" alt="${p.bn}" loading="lazy" decoding="async">`
+    : svg(p.seed, p.kind, w, h);
+}
 
 /* ══════════════════════  ৪. হিরো ও অ্যাবাউট ছবি  ══════════════════════ */
 (function heroArt(){
@@ -921,7 +931,7 @@ function renderGrid(){
     return `<article class="card rise">
       <div class="card-art">
         ${p.tag ? `<span class="tag" ${p.tagKind?`data-kind="${p.tagKind}"`:""}>${p.tag}</span>` : ""}
-        ${svg(p.seed, p.kind)}
+        ${media(p)}
       </div>
       <div class="card-body">
         <div>
@@ -991,7 +1001,7 @@ function renderCart(){
     $("#cartBody").innerHTML = cart.map((l,i)=>{
       const p = prod(l.id), v = p.variants[l.vi];
       return `<div class="line">
-        <div class="thumb">${svg(p.seed, p.kind, 120, 100)}</div>
+        <div class="thumb">${media(p, 120, 100)}</div>
         <div>
           <b>${p.bn}</b>
           <small>${v.w} · ${taka(v.p)}</small>
